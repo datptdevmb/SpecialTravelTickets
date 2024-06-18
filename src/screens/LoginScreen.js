@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Icons from '../constants/Icons';
-import stylescontainer from '../styles/components/Containerloginre_style';
+import stylescontainer from '../styles/screens/Containerloginre_style';
 import CustomInputView from '../components/CustomInputView';
 function LoginScreen() {
   
