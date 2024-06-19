@@ -1,18 +1,18 @@
 import { StyleSheet } from "react-native";
+import { scale, verticalScale, moderateVerticalScale, moderateScale } from "react-native-size-matters";
 
-
-const styles = StyleSheet.create({
+const stylesbuttonback = StyleSheet.create({
     button: {
-        borderRadius: 12,
+        borderRadius: moderateScale(12),
         borderWidth: 1,
         borderColor: '#E8ECF4', 
         backgroundColor: '#FFF', 
-        width: 41,
-        height: 41,
+        width: moderateVerticalScale(41),
+        height: moderateVerticalScale(41),
         flexShrink: 0,
         alignItems: 'center',
         justifyContent: 'center',
     },
 });
 
-export default styles
+export default stylesbuttonback

@@ -17,6 +17,7 @@ function ForgotScreen() {
             />
             <BackButton/>
             <CustomTextInput
+
                 isDarkMode={isDarkMode}
                 placeholder={"Enter your phone number"} />
         </SafeAreaView>

@@ -10,7 +10,9 @@ import {
 import Icons from '../constants/Icons';
 import stylescontainer from '../styles/screens/Containerloginre_style';
 import CustomInputView from '../components/CustomInputView';
+import CustomTextInput from '../components/CustomTextInput';
 function LoginScreen() {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passworderror, setPasswordError] = useState('');
@@ -26,6 +28,7 @@ function LoginScreen() {
     setPasswordError('');
   };
   return (
+   
     <SafeAreaView style={stylescontainer.container}>
       <TouchableOpacity style={stylescontainer.containerLeftArrow}>
         <Image source={Icons.leftarrow} style={stylescontainer.iconLeftArrow} />
