@@ -1,21 +1,26 @@
-import { TextInput } from "react-native";
-import styles from "../styles/components/CustomTextInput_style";
-import Colors from "../constants/Color";
+import React from 'react';
+import { TextInput, View, Text } from 'react-native';
+import styles from '../styles/components/CustomTextInput_style';
+import Colors from '../constants/Color';
 
-function CustomTextInput({ placeholder, isDarkMode }) {
+const CustomTextInput = ({
+    placeholder = '',
+    onChangeText,
+    inputStyle = {},
+    ...props
+}) => {
+
     return (
-        <TextInput
-            style={[
-                styles.containerTextIp,
-                {
-                    borderColor: isDarkMode ? 'red' : 'red',
-                    color: isDarkMode? Colors.black : Colors.white,
-                },
-            ]}
-            placeholder={placeholder}
-        >
-        </TextInput>
-    )
-}
+        <View style={{ ...styles.inputStyle,...inputStyle }}>
+            <TextInput
+                placeholder={placeholder}
+                placeholderTextColor={Colors.placeholderTextColor}
+                onChangeText={onChangeText}
+                style={styles.innerLineStyle}
+                {...props}
+            />
+        </View>
+    );
+};
 
-export default CustomTextInput
+export default CustomTextInput;
