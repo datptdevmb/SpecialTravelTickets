@@ -1,3 +1,4 @@
+
 import { StyleSheet } from "react-native";
 import { scale, verticalScale, moderateVerticalScale, moderateScale } from "react-native-size-matters";
 
@@ -17,4 +18,5 @@ const styles = StyleSheet.create({
     },
 })
 
-export default styles
+
+export default styles;

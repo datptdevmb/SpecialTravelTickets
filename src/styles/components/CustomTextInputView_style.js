@@ -16,7 +16,7 @@ const customStyles = StyleSheet.create({
   input: {
     fontSize: 15,
     fontWeight: '400',
-    fontFamily: 'Urbanist', 
+    fontFamily: 'Urbanist',
     fontStyle: 'normal',
     color: 'black',
   },
