@@ -11,6 +11,7 @@ import Icons from '../constants/Icons';
 import stylescontainer from '../styles/screens/Containerloginre_style';
 import CustomInputView from '../components/CustomInputView';
 function LoginScreen() {
+  
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passworderror, setPasswordError] = useState('');
@@ -50,9 +51,6 @@ function LoginScreen() {
           hidePassword={true}
         />
       </View>
-      <TouchableOpacity >
-        <Text style={stylescontainer.forgottext}>Forgot Password?</Text>
-      </TouchableOpacity>
     </SafeAreaView>
   );
 }

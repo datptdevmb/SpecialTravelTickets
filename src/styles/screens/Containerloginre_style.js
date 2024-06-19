@@ -45,15 +45,6 @@ const stylescontainer = StyleSheet.create({
         height: 'auto',
         paddingHorizontal: 30,
         marginTop: 57,
-      },
-      forgottext:{
-        color: Colors.darkgray,
-        fontSize: 14,
-        fontWeight: '600', 
-        textAlign: 'right',
-        marginTop: 5,
-        fontFamily: 'Urbanist', 
-        fontStyle: 'normal',
       }
 })
 
