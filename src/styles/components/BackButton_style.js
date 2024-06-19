@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 
-const styles = StyleSheet.create({
+const stylesbuttonback = StyleSheet.create({
     button: {
         borderRadius: 12,
         borderWidth: 1,
@@ -15,4 +15,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default styles
+export default stylesbuttonback

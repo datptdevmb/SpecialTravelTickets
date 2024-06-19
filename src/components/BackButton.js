@@ -1,17 +1,19 @@
-import { TouchableOpacity } from "react-native";
-import styles from "../styles/components/BackButton_style";
-import Svg, { Path } from 'react-native-svg';
+import {TouchableOpacity, Image} from 'react-native';
+import stylescontainer from '../styles/screens/Containerloginre_style';
+import Icons from '../constants/Icons';
+import { useState } from 'react';
 
-
-function BackButton() {
-
-    return (
-        <TouchableOpacity style={styles.button}>
-            <Svg width="19" height="19" viewBox="0 0 19 19" fill="none">
-               
-            </Svg>
-        </TouchableOpacity>
-    );
+function BackButton({ onPress }) {
+  const [pressnd, setpressnd] = useState(false);
+  const handlePress = () => {
+    setpressnd(true);
+    onPress();
+  };
+  return (
+    <TouchableOpacity style={stylescontainer.containerLeftArrow} onPress={handlePress}>
+      <Image source={Icons.leftarrow} style={stylescontainer.iconLeftArrow} />
+    </TouchableOpacity>
+  );
 }
 
-export default BackButton
+export default BackButton;
