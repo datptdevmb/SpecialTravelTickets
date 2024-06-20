@@ -1,24 +1,32 @@
-import { StyleSheet } from "react-native";
-import Colors from "../../constants/Color";
+import {StyleSheet} from 'react-native';
+import Colors from '../../constants/Color';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
-const stylesnet = StyleSheet.create({
-  btnnet: {
-    borderWidth: 1,
-    borderColor: Colors.lightgray,
-    paddingVertical: 15,
-    width: 105,
-    height: 56,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexShrink: 0,
-    borderRadius: 8,
-  },
-  imagenet: {
-    width: 26,
-    height: 26,
-    flexShrink: 0,
-  },
-});
+const stylesnet = isDarkMode =>
+  StyleSheet.create({
+    btnnet: {
+      borderWidth: 1,
+      borderColor: isDarkMode ? Colors.dark.white : Colors.light.lightgray,
+      paddingVertical: hp('3%'), // Responsive padding vertical
+      width: wp('30%'), // Responsive width
+      height: hp('7%'), // Responsive height
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: wp('4%'), // Responsive border radius
+      backgroundColor: isDarkMode
+        ? Colors.dark.background
+        : Colors.light.background,
+    },
+    imagenet: {
+      width: wp('8%'), // Responsive width
+      height: hp('3.5%'), // Responsive height
+      backgroundColor: isDarkMode
+        ? Colors.light.background
+        : Colors.dark.background,
+    },
+  });
 
 export default stylesnet;

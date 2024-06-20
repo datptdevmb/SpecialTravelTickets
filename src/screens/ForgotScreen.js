@@ -1,26 +1,43 @@
-import { SafeAreaView, StatusBar, View, useColorScheme } from "react-native";
-import CustomTextInput from "../components/CustomTextInput";
-import styles from "../styles/components/CustomTextInput_style";
-import Colors from "../constants/Color";
-import BackButton from "../components/BackButton";
+import React from 'react';
+import {
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  View,
+  useColorScheme,
+} from 'react-native';
+import CustomTextInput from '../components/CustomTextInput';
+import Colors from '../constants/ColorForgot';
+import BackButton from '../components/BackButton';
 
 function ForgotScreen() {
+  const isDarkMode = useColorScheme() === 'dark';
+  const backgroundColor = isDarkMode ? Colors.black : Colors.white;
 
-    const isDarkMode = useColorScheme() === "dark"
-
-    return (
-        <SafeAreaView
-            style={[styles.container, isDarkMode ? Colors.black : Colors.white]}>
-            <StatusBar
-                backgroundColor="transparent"
-                barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-            />
-            <BackButton/>
-            <CustomTextInput
-
-                isDarkMode={isDarkMode}
-                placeholder={"Enter your phone number"} />
-        </SafeAreaView>
-    )
+  return (
+    <SafeAreaView style={[styles.container, {backgroundColor}]}>
+      <StatusBar
+        backgroundColor="transparent"
+        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+      />
+      <View style={styles.content}>
+        <BackButton />
+        <CustomTextInput
+          isDarkMode={isDarkMode}
+          placeholder={'Enter your phone number'}
+        />
+      </View>
+    </SafeAreaView>
+  );
 }
-export default ForgotScreen
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  content: {
+    flex: 1,
+  },
+});
+
+export default ForgotScreen;
