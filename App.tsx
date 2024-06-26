@@ -6,7 +6,7 @@ import ResetPassWord from './src/screens/ResetPassWordScreen';
 
 function App(): React.JSX.Element {
   return (
-    <ResetPassWord />
+    <LoginScreen />
   );
 }
 export default App;

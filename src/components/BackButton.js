@@ -31,4 +31,3 @@ function BackButton({onPress}) {
 }
 
 export default BackButton;
-n
