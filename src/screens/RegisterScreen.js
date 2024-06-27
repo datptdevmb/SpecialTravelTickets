@@ -7,14 +7,18 @@ import {
   Text,
   TouchableOpacity,
   ToastAndroid,
+  useColorScheme,
 } from 'react-native';
 import Icons from '../constants/Icons';
-import stylescontainer from '../styles/screens/Containerloginre_style';
 import CustomInputView from '../components/CustomInputView';
 import BackButton from '../components/BackButton';
 import CustomButton from '../components/CustomButton';
 import Colors from '../constants/Color';
 import CustomSocialnetwork from '../components/CustomSocialnetwork';
+
+// Dark and Light
+import stylescontainer from '../styles/screens/Containerloginre_style';
+
 function RegisterScreen() {
   const [username, setUsername] = useState('');
   const [usernameerror, setUsernameerror] = useState('');
@@ -63,15 +67,17 @@ function RegisterScreen() {
   const handleLoginApple = async () => {
     ToastAndroid.show(' Successful!', ToastAndroid.SHORT);
   };
+  //Dark and Light
+  const isDarkMode = useColorScheme() === 'dark';
+  const styles = stylescontainer(isDarkMode);
+
   return (
-    <SafeAreaView style={stylescontainer.container}>
+    <SafeAreaView style={styles.container}>
       {/* button back */}
       <BackButton onPress={backButton} />
 
-      <Text style={stylescontainer.speech}>
-        Welcome back! Glad to see you, Again!
-      </Text>
-      <View style={stylescontainer.inputContainer}>
+      <Text style={styles.speech}>Welcome back! Glad to see you, Again!</Text>
+      <View style={styles.inputContainer}>
         <CustomInputView
           onTextChange={changeUsernameTitle}
           value={username}
@@ -109,12 +115,12 @@ function RegisterScreen() {
         title={'Agree and Register'}
         onPress={handleLogin}
       />
-      <View style={stylescontainer.ortherContainer}>
-        <View style={stylescontainer.ortherLine} />
-        <Text style={stylescontainer.ortherText}>Or Login with</Text>
-        <View style={stylescontainer.ortherLine} />
+      <View style={styles.ortherContainer}>
+        <View style={styles.ortherLine} />
+        <Text style={styles.ortherText}>Or Login with</Text>
+        <View style={styles.ortherLine} />
       </View>
-      <View style={stylescontainer.containerbtnnetwork}>
+      <View style={styles.containerbtnnetwork}>
         <CustomSocialnetwork image={Icons.iconfb} onPress={handleLoginFb} />
         <CustomSocialnetwork
           style={{marginStart: 8}}
