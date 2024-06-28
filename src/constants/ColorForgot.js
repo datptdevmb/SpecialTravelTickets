@@ -1,4 +1,4 @@
-const Colors = {
+const Color = {
     white: "#fff",
     black: '#000',
     lightgrayishblue: "#E8ECF4",
@@ -10,5 +10,5 @@ const Colors = {
     turquoise: "#35C2C1",
   };
   
-  export default Colors;
+  export default Color;
   

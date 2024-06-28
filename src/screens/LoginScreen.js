@@ -102,6 +102,12 @@ function LoginScreen() {
           onPress={handleLoginApple}
         />
       </View>
+      <View style={styles.containertxtsignup}> 
+        <Text style={styles.textsignupdonthave}>Don't have an account?</Text>
+        <TouchableOpacity>
+          <Text style={styles.signupText}>Sign Up</Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 }

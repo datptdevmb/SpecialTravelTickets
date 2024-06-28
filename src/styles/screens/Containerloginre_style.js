@@ -1,5 +1,7 @@
 import {StyleSheet} from 'react-native';
 import Colors from '../../constants/Color';
+import Color from '../../constants/ColorForgot';
+
 const stylescontainer = isDarkMode =>
   StyleSheet.create({
     container: {
@@ -100,7 +102,7 @@ const stylescontainer = isDarkMode =>
       marginTop: 55,
     },
     textsignupdonthave: {
-      color: Colors.midnightgray,
+      color: Color.midnightgray,
       fontSize: 15,
       fontWeight: '700',
       textAlign: 'center',
@@ -110,7 +112,7 @@ const stylescontainer = isDarkMode =>
       letterSpacing: 0.15,
     },
     signupText: {
-      color: Colors.turquoise,
+      color: Color.turquoise,
       fontSize: 15,
       fontWeight: '700',
       textAlign: 'center',
@@ -120,6 +122,34 @@ const stylescontainer = isDarkMode =>
       letterSpacing: 0.15,
       marginStart: 5,
     },
+      containertxtsignup: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 55,
+    
+  },
+  textsignupdonthave:{
+    color: Color.midnightgray,
+    fontSize: 15,
+    fontWeight: '700',
+    textAlign: 'center',
+    fontFamily: 'Urbanist',
+    fontStyle: 'normal',
+    lineHeight: 21,
+    letterSpacing: 0.15,
+  },
+  signupText:{
+    color: Color.turquoise,
+    fontSize: 15,
+    fontWeight: '700',
+    textAlign: 'center',
+    fontFamily: 'Urbanist',
+    fontStyle: 'normal',
+    lineHeight: 21,
+    letterSpacing: 0.15,
+    marginStart:5,
+  }
   });
 
 export default stylescontainer;
