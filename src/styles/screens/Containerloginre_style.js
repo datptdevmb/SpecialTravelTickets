@@ -18,6 +18,9 @@ const stylescontainer = isDarkMode =>
       flexShrink: 0,
       borderRadius: 12,
       borderWidth: 1,
+      borderColor: isDarkMode
+        ? Colors.dark.boder
+        : Colors.light.boder,
       backgroundColor: isDarkMode
         ? Colors.dark.background
         : Colors.light.background,

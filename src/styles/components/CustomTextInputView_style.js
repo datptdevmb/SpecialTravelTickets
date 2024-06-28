@@ -31,8 +31,8 @@ const customStyles = isDarkMode =>
       color: isDarkMode ? Colors.dark.text : Colors.light.text, // Màu chữ
     },
     showPassword: {
-      width: wp('5%'), // Responsive width
-      height: wp('5%'), // Responsive height
+      width: wp('5%'), 
+      height: wp('5%'), 
     },
   });
 

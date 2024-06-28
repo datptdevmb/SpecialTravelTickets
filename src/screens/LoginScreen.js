@@ -1,18 +1,18 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import {
   SafeAreaView,
   View,
-  Image,
   Text,
   TouchableOpacity,
   ToastAndroid,
+  useColorScheme
 } from 'react-native';
-import {useColorScheme} from 'react-native';
 import Icons from '../constants/Icons';
 import stylescontainer from '../styles/screens/Containerloginre_style';
 import CustomInputView from '../components/CustomInputView';
 import CustomButton from '../components/CustomButton';
 import CustomSocialnetwork from '../components/CustomSocialnetwork';
+import BackButton from '../components/BackButton';
 
 function LoginScreen() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -23,48 +23,52 @@ function LoginScreen() {
   const [passwordError, setPasswordError] = useState('');
   const [emailError, setEmailError] = useState('');
 
-  const changeEmailTitle = data => {
+  const handleEmailChange = (data) => {
     setEmail(data);
     setEmailError('');
   };
 
-  const changePasswContent = data => {
+  const handlePasswordChange = (data) => {
     setPassword(data);
     setPasswordError('');
   };
-  // sử lí chức năng đăng kí
+
+  // Handle login functionality
   const handleLogin = async () => {
     ToastAndroid.show('Login successful!', ToastAndroid.SHORT);
   };
-  // sử lí chức năng quay lại
-  const backButton = async () => {
-    ToastAndroid.show(' Successful!', ToastAndroid.SHORT);
+
+  // Handle back button functionality
+  const handleBackButton = async () => {
+    ToastAndroid.show('Back successful!', ToastAndroid.SHORT);
   };
+
   const handleLoginFb = async () => {
-    ToastAndroid.show(' Successful!', ToastAndroid.SHORT);
+    ToastAndroid.show('Login with Facebook successful!', ToastAndroid.SHORT);
   };
+
   const handleLoginGg = async () => {
-    ToastAndroid.show(' Successful!', ToastAndroid.SHORT);
+    ToastAndroid.show('Login with Google successful!', ToastAndroid.SHORT);
   };
+
   const handleLoginApple = async () => {
-    ToastAndroid.show(' Successful!', ToastAndroid.SHORT);
+    ToastAndroid.show('Login with Apple successful!', ToastAndroid.SHORT);
   };
+
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableOpacity style={styles.containerLeftArrow}>
-        <Image source={Icons.leftarrow} style={styles.iconLeftArrow} />
-      </TouchableOpacity>
+      <BackButton onPress={handleBackButton} isDarkMode={isDarkMode} />
       <Text style={styles.speech}>Welcome back! Glad to see you, Again!</Text>
       <View style={styles.inputContainer}>
         <CustomInputView
-          onTextChange={changeEmailTitle}
+          onTextChange={handleEmailChange}
           value={email}
           placeholder="Enter your email"
           keyboardType="email-address"
           placeholderTextColor="#8391A1"
         />
         <CustomInputView
-          onTextChange={changePasswContent}
+          onTextChange={handlePasswordChange}
           value={password}
           placeholder="Password"
           placeholderTextColor="#8391A1"
@@ -76,7 +80,7 @@ function LoginScreen() {
         <Text style={styles.forgottext}>Forgot Password?</Text>
       </TouchableOpacity>
       <CustomButton
-        style={{marginStart: -22, marginTop: 35}}
+        style={{ marginStart: -22, marginTop: 35 }}
         title={'Login'}
         onPress={handleLogin}
       />
@@ -88,12 +92,12 @@ function LoginScreen() {
       <View style={styles.containerbtnnetwork}>
         <CustomSocialnetwork image={Icons.iconfb} onPress={handleLoginFb} />
         <CustomSocialnetwork
-          style={{marginStart: 8}}
+          style={{ marginStart: 8 }}
           image={Icons.icongg}
           onPress={handleLoginGg}
         />
         <CustomSocialnetwork
-          style={{marginStart: 8}}
+          style={{ marginStart: 8 }}
           image={Icons.icapple}
           onPress={handleLoginApple}
         />

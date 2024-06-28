@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import Icons from '../constants/Icons';
 import customStyles from '../styles/components/CustomTextInputView_style';
-import Colors from '../constants/Color'; // Import Colors
+import Colors from '../constants/Color'; 
 
 const CustomInputView = props => {
   const {placeholder, keyboardType, onTextChange, value, hidePassword} = props;
@@ -48,10 +48,13 @@ const CustomInputView = props => {
       />
       {hide != null && (
         <TouchableOpacity onPress={hideShowPassword}>
-          <Image
-            source={hide ? Icons.show : Icons.hide}
-            style={styles.showPassword}
-          />
+        {
+          hide? (
+            <Icons.hide width={19} height={19} fill={"#6A707C"} style={styles.showPassword}/>
+          ):(
+            <Icons.show width={19} height={19} fill={"#6A707C"} style={styles.showPassword} />
+          )
+        }
         </TouchableOpacity>
       )}
     </View>

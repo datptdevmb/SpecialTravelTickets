@@ -19,7 +19,7 @@ const CustomSocialnetwork = ({image, onPress, style}) => {
   return (
     <View style={styles.containerbtnnet}>
       <TouchableOpacity style={[style, styles.btnnet]} onPress={handlePress}>
-        <Image style={styles.imagenet} source={image} />
+        <Image style={stylesnet.imagenet} source={image} />
       </TouchableOpacity>
     </View>
   );

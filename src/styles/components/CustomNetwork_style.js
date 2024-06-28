@@ -23,9 +23,7 @@ const stylesnet = isDarkMode =>
     imagenet: {
       width: wp('8%'), // Responsive width
       height: hp('3.5%'), // Responsive height
-      backgroundColor: isDarkMode
-        ? Colors.light.background
-        : Colors.dark.background,
+      
     },
   });
 

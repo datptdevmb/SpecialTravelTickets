@@ -9,6 +9,8 @@ const Colors = {
     lightbluegray: '#dcdcdc',
     midnightgray: '#2f2f2f',
     turquoise: '#40E0D0',
+    icon: '#000000',
+    boder: '#000000',
   },
   dark: {
     background: '#1b1d23',
@@ -20,6 +22,8 @@ const Colors = {
     lightbluegray: '#95a5a6',
     midnightgray: '#bdc3c7',
     turquoise: '#1abc9c',
+    icon: '#FFFFFF',
+    boder: '#FFFFFF',
   },
 };
 

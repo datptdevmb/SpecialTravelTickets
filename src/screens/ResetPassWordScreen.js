@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: moderateVerticalScale(20)
     },
     textCnPassw: {
+        marginTop: 26,
         color: "#1E232C",
         fontSize: scale(30),
         fontStyle: "normal",

@@ -1,33 +1,28 @@
-import {TouchableOpacity, Image} from 'react-native';
-import stylescontainer from '../styles/screens/Containerloginre_style';
+import React, { useState } from 'react';
+import { TouchableOpacity } from 'react-native';
 import Icons from '../constants/Icons';
-import {useState} from 'react';
+import stylescontainer from '../styles/screens/Containerloginre_style';
+import Colors from '../constants/Color';
 
-// <<<<<<< HEAD
+function BackButton({ onPress, isDarkMode }) {
+  const [pressed, setPressed] = useState(false);
 
-// const BackButton = ({buttonStyle = {}}) => {
-
-//     return (
-//         <TouchableOpacity style={{...styles.button,...buttonStyle}}>
-//             <Svg width="19" height="19" viewBox="0 0 19 19" fill="none"></Svg>
-//         </TouchableOpacity>
-//     );
-//   }
-// =======
-function BackButton({onPress}) {
-  const [pressnd, setpressnd] = useState(false);
   const handlePress = () => {
-    setpressnd(true);
+    setPressed(true);
     onPress();
   };
+
+  const styles = stylescontainer(isDarkMode);
+
   return (
-    <TouchableOpacity
-      style={stylescontainer.containerLeftArrow}
-      onPress={handlePress}>
-      <Image source={Icons.leftarrow} style={stylescontainer.iconLeftArrow} />
+    <TouchableOpacity style={styles.containerLeftArrow} onPress={handlePress}>
+      <Icons.leftarrow
+        width={19}
+        height={19}
+        fill={isDarkMode ? Colors.dark.icon : Colors.light.icon}
+      />
     </TouchableOpacity>
   );
-  // >>>>>>> f4652ae458de1e40e41d3c287d5e72c50dd07686
 }
 
 export default BackButton;

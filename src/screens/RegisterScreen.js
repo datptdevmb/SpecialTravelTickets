@@ -68,13 +68,13 @@ function RegisterScreen() {
     ToastAndroid.show(' Successful!', ToastAndroid.SHORT);
   };
   //Dark and Light
-  const isDarkMode = useColorScheme() === 'dark';
+  const isDarkMode = useColorScheme() === 'light';
   const styles = stylescontainer(isDarkMode);
 
   return (
     <SafeAreaView style={styles.container}>
       {/* button back */}
-      <BackButton onPress={backButton} />
+      <BackButton onPress={backButton} isDarkMode={isDarkMode}/>
 
       <Text style={styles.speech}>Welcome back! Glad to see you, Again!</Text>
       <View style={styles.inputContainer}>
@@ -111,7 +111,7 @@ function RegisterScreen() {
       </View>
 
       <CustomButton
-        style={{paddingHorizontal: 22, marginTop: 45}}
+        style={{marginStart: -22, marginTop: 20}}
         title={'Agree and Register'}
         onPress={handleLogin}
       />
