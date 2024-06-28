@@ -1,0 +1,10 @@
+install
+----------------------------------------------------------------
+// svg
+npm install react-native-svg
+// responsive
+npm install react-native-responsive-screen
+// navigation
+npm install @react-navigation/native-stack
+npm install @react-navigation/stack
+npm install react-native-gesture-handler
