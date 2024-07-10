@@ -6,9 +6,9 @@ import {
   View,
   useColorScheme,
 } from 'react-native';
-import CustomTextInput from '../components/CustomTextInput';
-import Colors from '../constants/ColorForgot';
-import BackButton from '../components/BackButton';
+import CustomTextInput from '../../components/CustomTextInput';
+import Colors from '../../constants/Color';
+import BackButton from '../../components/BackButton';
 
 function ForgotScreen() {
   const isDarkMode = useColorScheme() === 'dark';

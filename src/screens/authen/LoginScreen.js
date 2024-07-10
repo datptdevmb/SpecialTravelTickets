@@ -7,12 +7,12 @@ import {
   ToastAndroid,
   useColorScheme
 } from 'react-native';
-import Icons from '../constants/Icons';
-import stylescontainer from '../styles/screens/Containerloginre_style';
-import CustomInputView from '../components/CustomInputView';
-import CustomButton from '../components/CustomButton';
-import CustomSocialnetwork from '../components/CustomSocialnetwork';
-import BackButton from '../components/BackButton';
+import Icons from '../../constants/Icons';
+import stylescontainer from '../../styles/screens/Containerloginre_style';
+import CustomInputView from '../../components/CustomInputView';
+import CustomButton from '../../components/CustomButton';
+import CustomSocialnetwork from '../../components/CustomSocialnetwork';
+import BackButton from '../../components/BackButton';
 
 function LoginScreen() {
   const isDarkMode = useColorScheme() === 'dark';

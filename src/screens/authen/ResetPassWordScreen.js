@@ -1,7 +1,7 @@
 import { SafeAreaView, StatusBar, StyleSheet, Text, View, useColorScheme } from "react-native"
-import CustomTextInput from "../components/CustomTextInput"
+import CustomTextInput from "../../components/CustomTextInput"
 import { moderateVerticalScale, scale, verticalScale } from "react-native-size-matters"
-import BackButton from "../components/BackButton"
+import BackButton from "../../components/BackButton"
 
 
 const ResetPassWord = () => {

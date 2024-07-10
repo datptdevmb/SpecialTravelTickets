@@ -9,15 +9,14 @@ import {
   ToastAndroid,
   useColorScheme,
 } from 'react-native';
-import Icons from '../constants/Icons';
-import CustomInputView from '../components/CustomInputView';
-import BackButton from '../components/BackButton';
-import CustomButton from '../components/CustomButton';
-import Colors from '../constants/Color';
-import CustomSocialnetwork from '../components/CustomSocialnetwork';
+import Icons from '../../constants/Icons';
+import CustomInputView from '../../components/CustomInputView';
+import BackButton from '../../components/BackButton';
+import CustomButton from '../../components/CustomButton';
+import CustomSocialnetwork from '../../components/CustomSocialnetwork';
 
 // Dark and Light
-import stylescontainer from '../styles/screens/Containerloginre_style';
+import stylescontainer from '../../styles/screens/Containerloginre_style';
 
 function RegisterScreen() {
   const [username, setUsername] = useState('');
