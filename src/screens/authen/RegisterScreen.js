@@ -67,7 +67,7 @@ function RegisterScreen() {
     ToastAndroid.show(' Successful!', ToastAndroid.SHORT);
   };
   //Dark and Light
-  const isDarkMode = useColorScheme() === 'light';
+  const isDarkMode = useColorScheme() === 'dank';
   const styles = stylescontainer(isDarkMode);
 
   return (
