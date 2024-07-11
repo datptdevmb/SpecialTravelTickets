@@ -20,9 +20,7 @@ const stylescontainer = isDarkMode =>
       flexShrink: 0,
       borderRadius: 12,
       borderWidth: 1,
-      borderColor: isDarkMode
-        ? Colors.dark.boder
-        : Colors.light.boder,
+      borderColor: isDarkMode ? Colors.dark.boder : Colors.light.boder,
       backgroundColor: isDarkMode
         ? Colors.dark.background
         : Colors.light.background,
@@ -99,7 +97,7 @@ const stylescontainer = isDarkMode =>
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: 55,
+      marginTop: 83,
     },
     textsignupdonthave: {
       color: Color.midnightgray,
@@ -122,34 +120,27 @@ const stylescontainer = isDarkMode =>
       letterSpacing: 0.15,
       marginStart: 5,
     },
-      containertxtsignup: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 55,
-    
-  },
-  textsignupdonthave:{
-    color: Color.midnightgray,
-    fontSize: 15,
-    fontWeight: '700',
-    textAlign: 'center',
-    fontFamily: 'Urbanist',
-    fontStyle: 'normal',
-    lineHeight: 21,
-    letterSpacing: 0.15,
-  },
-  signupText:{
-    color: Color.turquoise,
-    fontSize: 15,
-    fontWeight: '700',
-    textAlign: 'center',
-    fontFamily: 'Urbanist',
-    fontStyle: 'normal',
-    lineHeight: 21,
-    letterSpacing: 0.15,
-    marginStart:5,
-  }
+    textsignupdonthave: {
+      color: Color.midnightgray,
+      fontSize: 15,
+      fontWeight: '700',
+      textAlign: 'center',
+      fontFamily: 'Urbanist',
+      fontStyle: 'normal',
+      lineHeight: 21,
+      letterSpacing: 0.15,
+    },
+    signupText: {
+      color: Color.turquoise,
+      fontSize: 15,
+      fontWeight: '700',
+      textAlign: 'center',
+      fontFamily: 'Urbanist',
+      fontStyle: 'normal',
+      lineHeight: 21,
+      letterSpacing: 0.15,
+      marginStart: 5,
+    },
   });
 
 export default stylescontainer;
