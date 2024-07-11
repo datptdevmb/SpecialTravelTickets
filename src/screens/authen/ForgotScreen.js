@@ -8,12 +8,12 @@ import {
   useColorScheme,
   TouchableOpacity
 } from 'react-native';
-import CustomTextInput from '../components/CustomTextInput';
-import Colors from '../constants/ColorForgot';
-import BackButton from '../components/BackButton';
-import CustomButton from '../components/CustomButton';
-import Color from '../constants/ColorForgot';
-import styles from '../styles/screens/forgotStyle';
+import CustomTextInput from '../../components/CustomTextInput';
+import BackButton from '../../components/BackButton';
+import CustomButton from '../../components/CustomButton';
+import Colors from '../../constants/ColorForgot';
+import styles from '../../styles/screens/forgotStyle';
+
 function ForgotScreen() {
   const isDarkMode = useColorScheme() === 'dark';
   const backgroundColor = isDarkMode ? Colors.black : Colors.white;
