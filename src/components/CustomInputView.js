@@ -11,7 +11,7 @@ import customStyles from '../styles/components/CustomTextInputView_style';
 import Colors from '../constants/Color'; 
 
 const CustomInputView = props => {
-  const {placeholder, keyboardType, onTextChange, value, hidePassword} = props;
+  const {placeholder, keyboardType, onTextChange, value, hidePassword,backgroundColor } = props;
 
   const [text, setText] = useState(value);
   const [hide, setHide] = useState(hidePassword);
@@ -37,7 +37,7 @@ const CustomInputView = props => {
   const styles = customStyles(isDarkMode);
 
   return (
-    <View style={[styles.inputView]}>
+    <View style={[styles.inputView,{ backgroundColor: backgroundColor || '#F7F8F9' }]}>
       <TextInput
         placeholder={placeholder}
         keyboardType={keyboardType || 'default'}

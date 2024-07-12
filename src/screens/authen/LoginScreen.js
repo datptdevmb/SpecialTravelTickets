@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   View,
   Text,
+  StatusBar,
   TouchableOpacity,
   ToastAndroid,
-  useColorScheme
+  useColorScheme,
 } from 'react-native';
 import Icons from '../../constants/Icons';
 import stylescontainer from '../../styles/screens/Containerloginre_style';
@@ -23,12 +24,12 @@ function LoginScreen() {
   const [passwordError, setPasswordError] = useState('');
   const [emailError, setEmailError] = useState('');
 
-  const handleEmailChange = (data) => {
+  const handleEmailChange = data => {
     setEmail(data);
     setEmailError('');
   };
 
-  const handlePasswordChange = (data) => {
+  const handlePasswordChange = data => {
     setPassword(data);
     setPasswordError('');
   };
@@ -57,6 +58,10 @@ function LoginScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar
+        backgroundColor="transparent"
+        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+      />
       <BackButton onPress={handleBackButton} isDarkMode={isDarkMode} />
       <Text style={styles.speech}>Welcome back! Glad to see you, Again!</Text>
       <View style={styles.inputContainer}>
@@ -80,7 +85,7 @@ function LoginScreen() {
         <Text style={styles.forgottext}>Forgot Password?</Text>
       </TouchableOpacity>
       <CustomButton
-        style={{ marginStart: -22, marginTop: 35 }}
+        style={{marginStart: -22, marginTop: 35}}
         title={'Login'}
         onPress={handleLogin}
       />
@@ -90,19 +95,17 @@ function LoginScreen() {
         <View style={styles.ortherLine} />
       </View>
       <View style={styles.containerbtnnetwork}>
-        <CustomSocialnetwork image={Icons.iconfb} onPress={handleLoginFb} />
         <CustomSocialnetwork
-          style={{ marginStart: 8 }}
-          image={Icons.icongg}
+          IconComponent={Icons.iconfb}
+          onPress={handleLoginFb}
+        />
+        <CustomSocialnetwork
+          style={{marginStart: 20}}
+          IconComponent={Icons.icongg}
           onPress={handleLoginGg}
         />
-        <CustomSocialnetwork
-          style={{ marginStart: 8 }}
-          image={Icons.icapple}
-          onPress={handleLoginApple}
-        />
       </View>
-      <View style={styles.containertxtsignup}> 
+      <View style={styles.containertxtsignup}>
         <Text style={styles.textsignupdonthave}>Don't have an account?</Text>
         <TouchableOpacity>
           <Text style={styles.signupText}>Sign Up</Text>

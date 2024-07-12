@@ -30,9 +30,6 @@ const styles = StyleSheet.create({
         color: 'black',
         paddingHorizontal: 20,
         paddingTop: 30
-
-
-
     },
     containertxtsignup: {
         flexDirection: 'row',

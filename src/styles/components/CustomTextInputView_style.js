@@ -11,7 +11,7 @@ const customStyles = isDarkMode =>
       borderWidth: 1,
       width: wp('90%'), // Responsive width
       marginTop: hp('2%'), // Responsive margin top
-      height: hp('7%'), // Responsive height
+      height: hp('7.5%'), // Responsive height
       borderRadius: wp('4%'), // Responsive border radius
       paddingHorizontal: wp('4%'), // Responsive horizontal padding
       flexDirection: 'row',

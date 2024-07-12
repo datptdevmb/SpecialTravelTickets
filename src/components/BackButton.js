@@ -11,9 +11,7 @@ function BackButton({ onPress, isDarkMode }) {
     setPressed(true);
     onPress();
   };
-
-  const styles = stylescontainer(isDarkMode);
-
+  const styles = stylescontainer(isDarkMode)
   return (
     <TouchableOpacity style={styles.containerLeftArrow} onPress={handlePress}>
       <Icons.leftarrow

@@ -6,7 +6,7 @@ import styles from '../../styles/screens/changpasswordStyle'
 const ChangePasswordSuccess = () => {
   return (
     <View style={styles.container}>
-      <Image source={require('../../assets/icons/successmark.jpg')} />
+      <Image source={require('../../assets/icons/successmark.png')} />
       <Text style={styles.textChang}> Password Changed!</Text>
       <Text style={styles.textSub}>Your password has been changed successfully.</Text>
       <View style={styles.containerButton}>

@@ -8,7 +8,7 @@ import {
 import React, {useState} from 'react';
 import stylesnet from '../styles/components/CustomNetwork_style';
 
-const CustomSocialnetwork = ({image, onPress, style}) => {
+const CustomSocialnetwork = ({IconComponent, onPress, style}) => {
   const [pressnd, setpressnd] = useState(false);
   const handlePress = () => {
     setpressnd(true);
@@ -19,7 +19,7 @@ const CustomSocialnetwork = ({image, onPress, style}) => {
   return (
     <View style={styles.containerbtnnet}>
       <TouchableOpacity style={[style, styles.btnnet]} onPress={handlePress}>
-        <Image style={stylesnet.imagenet} source={image} />
+      {IconComponent && <IconComponent width={18} height={18} />}
       </TouchableOpacity>
     </View>
   );

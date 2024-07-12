@@ -7,7 +7,7 @@ const stylescontainer = isDarkMode =>
     container: {
       flex: 1,
       padding: 15,
-      paddingHorizontal: 22,
+      paddingHorizontal: 20,
       flexDirection: 'column',
       backgroundColor: isDarkMode
         ? Colors.dark.background
@@ -36,11 +36,10 @@ const stylescontainer = isDarkMode =>
         : Colors.light.background,
     },
     speech: {
-      width: 280,
+      width: 292,
       color: isDarkMode ? Colors.dark.text : Colors.light.text,
       fontSize: 30,
       fontWeight: '700',
-      textAlign: 'center',
       marginTop: 20,
       marginBottom: 20,
       fontFamily: 'Urbanist',
@@ -48,14 +47,22 @@ const stylescontainer = isDarkMode =>
       lineHeight: 39,
       letterSpacing: -0.3,
     },
+    textDont: {
+      fontSize: 16,
+      color: 'gray',
+      fontStyle: 'normal',
+      fontWeight: '500',
+      lineHeight: 24,
+      fontFamily: 'Urbanist',
+    },
     inputContainer: {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       width: '100%',
       height: 'auto',
-      paddingHorizontal: 30,
-      marginTop: 35,
+      paddingHorizontal: 0,
+      marginTop: 30,
     },
     forgottext: {
       color: isDarkMode ? Colors.dark.text : Colors.light.text,
@@ -91,13 +98,13 @@ const stylescontainer = isDarkMode =>
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: 22,
+      marginTop: 20,
     },
     containertxtsignup: {
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: 83,
+      flex: 1,
     },
     textsignupdonthave: {
       color: Color.midnightgray,

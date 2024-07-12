@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {
   SafeAreaView,
-  StyleSheet,
   View,
-  Image,
   Text,
-  TouchableOpacity,
+  StatusBar,
   ToastAndroid,
   useColorScheme,
 } from 'react-native';
@@ -72,9 +70,12 @@ function RegisterScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* button back */}
-      <BackButton onPress={backButton} isDarkMode={isDarkMode}/>
+      <StatusBar
+        backgroundColor="transparent"
+        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+      />
 
+      <BackButton onPress={backButton} isDarkMode={isDarkMode}/>
       <Text style={styles.speech}>Welcome back! Glad to see you, Again!</Text>
       <View style={styles.inputContainer}>
         <CustomInputView
@@ -120,16 +121,11 @@ function RegisterScreen() {
         <View style={styles.ortherLine} />
       </View>
       <View style={styles.containerbtnnetwork}>
-        <CustomSocialnetwork image={Icons.iconfb} onPress={handleLoginFb} />
+        <CustomSocialnetwork IconComponent={Icons.iconfb} onPress={handleLoginFb} />
         <CustomSocialnetwork
-          style={{marginStart: 8}}
-          image={Icons.icongg}
+          style={{marginStart: 20}}
+          IconComponent={Icons.icongg}
           onPress={handleLoginGg}
-        />
-        <CustomSocialnetwork
-          style={{marginStart: 8}}
-          image={Icons.icapple}
-          onPress={handleLoginApple}
         />
       </View>
     </SafeAreaView>

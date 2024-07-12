@@ -11,7 +11,7 @@ const stylesnet = isDarkMode =>
       borderWidth: 1,
       borderColor: isDarkMode ? Colors.dark.white : Colors.light.lightgray,
       paddingVertical: hp('3%'), // Responsive padding vertical
-      width: wp('30%'), // Responsive width
+      width: wp('40%'), // Responsive width
       height: hp('7%'), // Responsive height
       justifyContent: 'center',
       alignItems: 'center',
