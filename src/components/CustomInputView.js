@@ -8,10 +8,19 @@ import {
 } from 'react-native';
 import Icons from '../constants/Icons';
 import customStyles from '../styles/components/CustomTextInputView_style';
-import Colors from '../constants/Color'; 
+import Colors from '../constants/Color';
 
 const CustomInputView = props => {
-  const {placeholder, keyboardType, onTextChange, value, hidePassword,backgroundColor } = props;
+  const textColor = isDarkMode ? Colors.dark.text : Colors.light.text;
+
+  const {
+    placeholder,
+    keyboardType,
+    onTextChange,
+    value,
+    hidePassword,
+    backgroundColor,
+  } = props;
 
   const [text, setText] = useState(value);
   const [hide, setHide] = useState(hidePassword);
@@ -37,24 +46,36 @@ const CustomInputView = props => {
   const styles = customStyles(isDarkMode);
 
   return (
-    <View style={[styles.inputView,{ backgroundColor: backgroundColor || '#F7F8F9' }]}>
+    <View
+      style={[
+        styles.inputView,
+        {backgroundColor: backgroundColor || '#F7F8F9'},
+      ]}>
       <TextInput
         placeholder={placeholder}
         keyboardType={keyboardType || 'default'}
         onChangeText={handleTextChange}
         value={text}
         secureTextEntry={hide}
-        style={styles.input}
+        style={[styles.input, {color: textColor}]}
       />
       {hide != null && (
         <TouchableOpacity onPress={hideShowPassword}>
-        {
-          hide? (
-            <Icons.hide width={19} height={19} fill={"#6A707C"} style={styles.showPassword}/>
-          ):(
-            <Icons.show width={19} height={19} fill={"#6A707C"} style={styles.showPassword} />
-          )
-        }
+          {hide ? (
+            <Icons.hide
+              width={19}
+              height={19}
+              fill={'#6A707C'}
+              style={styles.showPassword}
+            />
+          ) : (
+            <Icons.show
+              width={19}
+              height={19}
+              fill={'#6A707C'}
+              style={styles.showPassword}
+            />
+          )}
         </TouchableOpacity>
       )}
     </View>

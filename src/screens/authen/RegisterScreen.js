@@ -65,7 +65,7 @@ function RegisterScreen() {
     ToastAndroid.show(' Successful!', ToastAndroid.SHORT);
   };
   //Dark and Light
-  const isDarkMode = useColorScheme() === 'dank';
+  const isDarkMode = useColorScheme() === 'dark';
   const styles = stylescontainer(isDarkMode);
 
   return (
@@ -75,7 +75,7 @@ function RegisterScreen() {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
       />
 
-      <BackButton onPress={backButton} isDarkMode={isDarkMode}/>
+      <BackButton onPress={backButton} isDarkMode={isDarkMode} />
       <Text style={styles.speech}>Welcome back! Glad to see you, Again!</Text>
       <View style={styles.inputContainer}>
         <CustomInputView
@@ -121,7 +121,10 @@ function RegisterScreen() {
         <View style={styles.ortherLine} />
       </View>
       <View style={styles.containerbtnnetwork}>
-        <CustomSocialnetwork IconComponent={Icons.iconfb} onPress={handleLoginFb} />
+        <CustomSocialnetwork
+          IconComponent={Icons.iconfb}
+          onPress={handleLoginFb}
+        />
         <CustomSocialnetwork
           style={{marginStart: 20}}
           IconComponent={Icons.icongg}
