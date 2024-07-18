@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 import Icons from '../constants/Icons';
 import customStyles from '../styles/components/CustomTextInputView_style';
-import Colors from '../constants/Color'; 
 
 const CustomInputView = props => {
   const {placeholder, keyboardType, onTextChange, value, hidePassword,backgroundColor } = props;
