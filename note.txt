@@ -8,3 +8,5 @@ npm install react-native-responsive-screen
 npm install @react-navigation/native-stack
 npm install @react-navigation/stack
 npm install react-native-gesture-handler
+//keyboard
+npm install react-native-keyboard-aware-scroll-view --save
